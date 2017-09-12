@@ -146,6 +146,10 @@
     <string name="accessibility_quick_settings_usb_tether_changed_on">USB tethering turned on</string>
     <string name="quick_settings_usb_tether_label">USB tethering</string>
 
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">Screenshot</string>
+    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    
     <!-- Gaming mode -->
     <string name="gaming_mode_not_enabled">Gaming mode is disabled in settings</string>
     <string name="quick_settings_gaming_mode_label">Gaming mode</string>
