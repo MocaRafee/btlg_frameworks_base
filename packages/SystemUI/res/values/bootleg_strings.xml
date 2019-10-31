@@ -51,7 +51,7 @@
     <string name="global_action_restart_bootloader">Bootloader</string-->
     <string name="global_action_screenshot">Screenshot</string>
     <string name="global_action_flashlight">Flashlight</string>
-    <string name="global_action_screenrecord">Screen Rec.</string>
+    <string name="global_action_screenrecord">Screen Record</string>
 
     <!-- Heads up snooze toast -->
     <string name="heads_up_snooze_message_one_minute">Peeking notifications for <xliff:g id="string">%s</xliff:g> are snoozing for 1 minute.</string>
@@ -163,6 +163,9 @@
 
     <!-- Volume panel QS tile -->
     <string name="quick_settings_volume_panel_label">Volume panel</string>
+
+     <!--Screenrecord Tile-->
+    <string name="screenrecorder_title_tile">Screenrecord</string>
 
     <!-- Gaming mode -->
     <string name="gaming_mode_not_enabled">Gaming mode is disabled in settings</string>
