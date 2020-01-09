@@ -354,6 +354,76 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
         }
         return true;
     }
+        };
+        onAirplaneModeChanged();
+
+        mShowAdvancedToggles = new AdvancedAction(
+                SHOW_TOGGLES_BUTTON,
+                com.android.systemui.R.drawable.ic_restart_advanced,
+                com.android.systemui.R.string.global_action_restart_advanced,
+                mWindowManagerFuncs, mHandler) {
+
+            public boolean showDuringKeyguard() {
+                boolean showlocked = Settings.System.getInt(mContext.getContentResolver(),
+                        Settings.System.POWERMENU_LS_ADVANCED_REBOOT, 0) == 1;
+                return showlocked;
+            }
+
+            public boolean showBeforeProvisioning() {
+                return true;
+            }
+        };
+
+        mRestartHot = new AdvancedAction(
+                RESTART_HOT_BUTTON,
+                com.android.systemui.R.drawable.ic_restart_hot,
+                com.android.systemui.R.string.global_action_restart_hot,
+                mWindowManagerFuncs, mHandler) {
+
+            public boolean showDuringKeyguard() {
+                return true;
+            }
+
+            public boolean showBeforeProvisioning() {
+                return true;
+            }
+        };
+
+        mRestartRecovery = new AdvancedAction(
+                RESTART_RECOVERY_BUTTON,
+                com.android.systemui.R.drawable.ic_restart_recovery,
+                com.android.systemui.R.string.global_action_restart_recovery,
+                mWindowManagerFuncs, mHandler) {
+
+            public boolean showDuringKeyguard() {
+                return true;
+            }
+
+            public boolean showBeforeProvisioning() {
+                return true;
+            }
+        };
+
+        mRestartBootloader = new AdvancedAction(
+                RESTART_BOOTLOADER_BUTTON,
+                com.android.systemui.R.drawable.ic_restart_bootloader,
+                com.android.systemui.R.string.global_action_restart_bootloader,
+                mWindowManagerFuncs, mHandler) {
+
+            public boolean showDuringKeyguard() {
+                return true;
+            }
+
+            public boolean showBeforeProvisioning() {
+                return true;
+            }
+        };
+
+        mRestartSystemUI = new AdvancedAction(
+                RESTART_UI_BUTTON,
+                com.android.systemui.R.drawable.ic_restart_ui,
+                com.android.systemui.R.string.global_action_restart_ui,
+                mWindowManagerFuncs, mHandler) {
 
     private List<Action> getCurrentRebootMenuItems() {
         List<Action> items = new ArrayList<Action>();
@@ -588,7 +658,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
     private final class PowerAction extends SinglePressAction implements LongPressAction {
         private PowerAction() {
-            super(R.drawable.ic_lock_power_off,
+            super(com.android.systemui.R.drawable.ic_power_off,
                     R.string.global_action_power_off);
         }
 
@@ -693,7 +763,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
     private final class RestartAction extends SinglePressAction implements LongPressAction {
         private RestartAction() {
-            super(R.drawable.ic_restart, com.android.systemui.R.string.global_action_reboot);
+            super(com.android.systemui.R.drawable.ic_restart, com.android.systemui.R.string.global_action_restart_system);
             if (mRebootMenu) {
                 mMessageResId = com.android.systemui.R.string.global_action_reboot_sub;
             } else if (showRebootSubmenu() && advancedRebootEnabled(mContext)) {
@@ -866,8 +936,8 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
     }
 
     private Action getFlashlightToggleAction() {
-        return new SinglePressAction(com.android.systemui.R.drawable.ic_lock_flashlight,
-                com.android.systemui.R.string.global_action_flashlight) {
+        return new SinglePressAction(com.android.systemui.R.drawable.ic_torch,
+                com.android.systemui.R.string.quick_settings_flashlight_label) {
 
             public void onPress() {
                 try {
@@ -898,7 +968,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
     private class ScreenshotAction extends SinglePressAction implements LongPressAction {
         public ScreenshotAction() {
-            super(R.drawable.ic_screenshot, R.string.global_action_screenshot);
+            super(com.android.systemui.R.drawable.ic_screenshot, com.android.systemui.R.string.global_action_screenshot);
         }
 
         @Override
@@ -1130,7 +1200,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
     }
 
     private Action getLockdownAction() {
-        return new SinglePressAction(com.android.systemui.R.drawable.ic_lock_lock,
+        return new SinglePressAction(com.android.systemui.R.drawable.ic_lockdown,
                 R.string.global_action_lockdown) {
 
             @Override
