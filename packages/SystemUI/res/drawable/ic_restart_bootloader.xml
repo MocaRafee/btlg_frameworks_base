@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24.0dp"
     android:height="24.0dp"
@@ -28,31 +27,4 @@ L15.0969,10.9391 M11.6422,10.0983 L11.6422,10.9391 M11.6422,10.9391
 L13.9315,10.9391 M13.9315,10.9391 L13.9315,10.0983 M13.9315,10.0983
 C13.9315,9.46563,13.4154,8.95784,12.7827,8.95784
 C12.1584,8.95784,11.6422,9.46564,11.6422,10.0983" />
-=======
-<!--
-     Copyright (C) 2019 Havoc-OS
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp"
-    android:height="24dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24"
-    android:tint="?attr/colorControlNormal">
-
-    <path
-        android:fillColor="#FFFFFFFF"
-        android:pathData="M22,9V7H20V5A2,2 0 0,0 18,3H4A2,2 0 0,0 2,5V19A2,2 0 0,0 4,21H18A2,2 0 0,0 20,19V17H22V15H20V13H22V11H20V9H22M18,19H4V5H18V19M6,13H11V17H6V13M12,7H16V10H12V7M6,7H11V12H6V7M12,11H16V17H12V11Z" />
->>>>>>> 94c4620a984... PowerMenu: Move resources to SystemUI to avoid jank
 </vector>
